@@ -1,0 +1,21 @@
+﻿@page "/"
+@rendermode  InteractiveServer
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app
+<br/>
+<input @onchange="UpdateMessage"/>
+<p>Message saisi: @message</p>
+
+@code {
+    private string message = "";
+
+    private void UpdateMessage(ChangeEventArgs e)
+    {
+        message = e.Value.ToString();
+    }
+
+
+}
